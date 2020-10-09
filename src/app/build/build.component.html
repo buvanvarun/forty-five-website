@@ -10,111 +10,84 @@
     [tpms]="display[6]" 
     [lock]="display[3]"
     ></app-threeloader>
-  <div class="build-options-container">
-    <div class="build-options-color-container">
-      <button (click)="changeDisplay(0)" class="build-options-btn">
-        Color
-      </button>
-    </div>
-    <div class="vl"></div>
-    <div class="build-options-lock-container">
-      <button (click)="changeDisplay(3)" class="build-options-btn">
-        Locking
-      </button>
-    </div>
-    <div class="vl"></div>
-    <div class="build-options-fender-container">
-      <button (click)="changeDisplay(4)" class="build-options-btn">
-        Fenders
-      </button>
-    </div>
-    <div class="vl"></div>
-    <div class="build-options-tpms-container">
-      <button (click)="changeDisplay(6)" class="build-options-btn">TPMS</button>
-    </div>
-  </div>
-  <div class="build-choice-container">
-    <div *ngIf="display[1]" class="build-choice-range-container">
-      <button (click)="setChoice(1, 0)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">43<span>Km</span></h2>
-      </button>
-      <div class="vl"></div>
-      <button (click)="setChoice(1, 1)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">65<span>Km</span></h2>
-      </button>
-    </div>
-    <div *ngIf="display[2]" class="build-choice-range-container">
-      <button (click)="setChoice(2, 0)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">2.5<span>Hrs</span></h2>
-      </button>
-      <div class="vl"></div>
-      <button (click)="setChoice(2, 1)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">75<span>mins</span></h2>
-      </button>
-    </div>
-    <div *ngIf="display[5]" class="build-choice-service-container">
-      <div (click)="setChoice(5, 0)" class="build-choice-service-btn">
-        <h1 class="build-basic-head-text">Basic</h1>
-        <ul class="build-basic-features">
-          <li *ngFor="let basic of basics" class="build-basic-feature">
-            <div class="build-basic-feature-container">
-              <div class="build-basic-feature-svg-container">
-                <svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-check2" fill="green"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                </svg>
-              </div>
-              <div class="build-basic-feature-text-container">
-                <h1 class="build-basic-feature-text">
-                  {{ basic }}
-                </h1>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <h1 class="build-basic-price-text">FREE</h1>
+    <div class="dropDownClass">
+      <div class="dropdown">
+        <button (click)="changeDisplay(0)" class="dropbtn">
+          Color
+        </button>
+        <div class="dropdown-content">
+          <button>Black</button>
+          <button (click)="setColor(1)">Gray</button>
+        </div>
       </div>
-      <div (click)="setChoice(5, 1)" class="build-choice-service-btn">
-        <h1 class="build-basic-head-text">Premium/ll years</h1>
-        <ul class="build-basic-features">
-          <li *ngFor="let premium of premiums" class="build-basic-feature">
-            <div class="build-basic-feature-container">
-              <div class="build-basic-feature-svg-container">
-                <svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-check2" fill="green"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                </svg>
-              </div>
-              <div class="build-basic-feature-text-container">
-                <h1 class="build-basic-feature-text">
-                  {{ premium }}
-                </h1>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <h1 class="build-premium-price-text">Rs.6500/-</h1>
+      <div class="dropdown">
+        <button class="dropbtn">Fenders</button>
+        <div class="dropdown-content">
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Locks</button>
+        <div class="dropdown-content">
+          <button>Smart Lock</button>
+          <button>Cable Lock</button>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">TPMS</button>
+        <div class="dropdown-content">
+          <button>Yes</button>
+          <button>No</button>
+        </div>
+      </div>
+    
+      <table style="font-size: 30px;">
+        <tr>
+          <td>Color</td>
+          <td>:</td>
+          <td><select name="color" id="color" class="dropbtn">
+            <option disabled selected value>-- Nothing Selected --</option>
+            <option value="black">Black</option>
+            <option value="gray">Gray</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>TPMS</td>
+          <td>:</td>
+          <td><select name="tpms" id="tpms" class="dropbtn">
+            <option disabled selected value>-- Nothing Selected --</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select> </td>
+        </tr>
+        <tr>
+          <td>Fenders</td>
+          <td>:</td>
+          <td><select name="fenders" id="fenders" class="dropbtn">
+            <option disabled selected value>-- Nothing Selected --</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>Locks</td>
+          <td>:</td>
+          <td><select name="lock" id="lock" class="dropbtn">
+            <option disabled selected value>-- Nothing Selected --</option>
+            <option value="smartLock">Smart Lock</option>
+            <option value="cableLock">Cable Lock</option>
+          </select></td>
+        </tr>
+      </table>
+    </div>
+    <div class="build-price-container">
+      <!-- <div class="specs-build-premium-build-text-container">
+        <h1 class="specs-build-premium-build-text">PROCEED<br />TO BUY</h1>
+      </div> -->
+      <div class="build-buy-btn-container">
+        <!-- routerLink="/buy/{{ buyUrl }}" -->
+        <button (click)="buyProduct()" class="specs-build-premium-build-btn"></button>
       </div>
     </div>
-    <!-- <div *ngIf="display[6]" class="build-choice-range-container">
-      <button (click)="setChoice(6, 1)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">Yes</h2>
-      </button>
-      <div class="vl"></div>
-      <button (click)="setChoice(6, 0)" class="build-choice-btn">
-        <h2 class="build-choice-range-text">No</h2>
-      </button>
-    </div> -->
-  </div>
-  <div class="build-price-container">
-    <!-- <div class="specs-build-premium-build-text-container">
-      <h1 class="specs-build-premium-build-text">PROCEED<br />TO BUY</h1>
-    </div> -->
-    <div class="build-buy-btn-container">
-      <!-- routerLink="/buy/{{ buyUrl }}" -->
-      <button (click)="buyProduct()" class="specs-build-premium-build-btn"></button>
-    </div>
-  </div>
 </main>

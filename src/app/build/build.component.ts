@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThreeloaderComponent } from 'C:/Users/theja/Desktop/fortyfive/forty-five-website/src/app/build/threeloader/threeloader.component';
 
 @Component({
   selector: 'app-build',
   templateUrl: './build.component.html',
   styleUrls: ['./build.component.css'],
 })
+
+// let ThreeloaderComponentObject = new ThreeloaderComponent();
 export class BuildComponent implements OnInit {
   display = [false, false, false, false, false, false, false];
   choices = [0, 0, 0, 0, 0, 0, 0];
@@ -13,6 +16,8 @@ export class BuildComponent implements OnInit {
   summary = false;
   buyUrl = '0000000';
   constructor(private router: Router) {}
+
+  
 
   basics = [
     'Bike with the selected options',
