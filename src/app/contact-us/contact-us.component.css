@@ -1,9 +1,9 @@
 main {
   background-color: #d8d8d8;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   position: absolute;
-  top: 0;
+  top: 100vh;
   left: 0;
   overflow: hidden;
 }
@@ -74,8 +74,8 @@ main {
 .contact-career-options-container {
   position: relative;
   top: 25%;
-  width: 80%;
-  height: 30%;
+  width: 20%;
+  /* height: 30%; */
   background-color: rgb(186, 186, 186);
   border-radius: 30px;
   display: flex;
@@ -85,8 +85,8 @@ main {
 }
 .contact-career-option {
   position: relative;
-  width: 100%;
-  height: 50%;
+  width: 10%;
+  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -98,7 +98,7 @@ main {
   height: 50px;
 }
 .contact-career-option-text {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #1d1d1f;
   cursor: pointer;
@@ -109,7 +109,7 @@ main {
 .other-role {
   position: relative;
   top: 30%;
-  width: 58%;
+  width: 100%;
 }
 .build-buy-modal-bg {
   position: fixed;
