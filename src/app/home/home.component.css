@@ -283,53 +283,80 @@ h3 {
   }
 }
 
-@keyframes cf3FadeInOut {
-  0% {
-  opacity:1;
-}
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
-}
-
-#cf3 img.home-fortyfive-img-container {
-animation-name: cf3FadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 3s;
-animation-direction: alternate;
-}
-
-
-
-
-/* .nav-options-container {
-  z-index: 5;
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  width: 40vw;
-  top: 25px;
-  left: 60%;
+  top: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.nav-option-btn {
-  font-weight: 400;
-  font-size: 18px;
-  border: none;
-  background-color: transparent;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-option-btn:hover {
-  cursor: pointer;
+.content {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  text-align: center;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.nav-option-btn:focus {
-  outline: none;
-} */
+
+.button {
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+	/* :hover {
+		background-color: white;
+		color: blue;
+		border: 2px solid $blue;
+	} */
+}
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 50%;
+	width: 30%;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 80px;
+}
+
+.inputSelect {
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
