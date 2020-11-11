@@ -17,6 +17,12 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BuyComponent } from './buy/buy.component';
 import { CareerApplicationComponent } from './career-application/career-application.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,9 +43,12 @@ import { CareerApplicationComponent } from './career-application/career-applicat
     AppRoutingModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'fortyfivesubscriptions')
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  
+}
