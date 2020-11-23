@@ -17,8 +17,12 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BuyComponent } from './buy/buy.component';
 import { CareerApplicationComponent } from './career-application/career-application.component';
 
+import { WriteService } from '../app/service/write.service';
+
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
@@ -43,10 +47,12 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'fortyfivesubscriptions')
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [WriteService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

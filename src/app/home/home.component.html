@@ -1,6 +1,6 @@
 <main>
   <div class="nav-home-btn-container">
-    <h3 routerLink="/" class="nav-home" style="font-size: 24px;">fortyfive</h3>
+    <h3 class="nav-home" style="font-size: 24px;">fortyfive</h3>
   </div>
   <nav>
     <div (click)="onBtnToggle()" class="hamburger">
@@ -10,33 +10,32 @@
     </div>
     <ul class="nav-links">
       <div class="nav-container">
-        <li routerLink="/specs">specs</li>
-        <li routerLink="/blog">blog</li>
-        <li routerLink="/blog">experience</li>
-        <li routerLink="/build">preorder</li>
-        <li routerLink="/blog">FAQs</li>
-        <li routerLink="/blog">feedback</li>
+        <li>specs</li>
+        <li>blog</li>
+        <li>experience</li>
+        <li>preorder</li>
+        <li>FAQs</li>
+        <li>feedback</li>
       </div>
     </ul>
   </nav>
   <div class="home-fortyfive-img-container">
     <img src="/assets/images/fortyfive.jpg" alt="fortyfive-bike" class="home-fortyfive-img" />
-    <img src="/assets/images/fortyfivelogo.png" alt="fortyfive-bike" class="home-fortyfive-img" />
   </div>
   <div class="bg-modal">
     <div class="modal-contents">
       <img src="/assets/images/fortyfivelogo.png" alt="" style="width: 40%; height: 30%;">
       <p>Please enter your details so that we make sure you are updated by our new products and features</p>
-      <form action="">
-        <input type="email" class="inputSelect" placeholder="E-Mail">
-        <input type="text" class="inputSelect" placeholder="Phone Number">
-        <select class="inputSelect" style="width: 54%;">
+      <div class="form-group">
+        <input type="email" class="inputSelect" [(ngModel)]="email"  placeholder="E-Mail">
+        <input type="text" class="inputSelect" [(ngModel)]="phone" placeholder="Phone Number">
+        <select class="inputSelect" [(ngModel)]="workingStatus" style="width: 54%;">
           <option value="" disabled selected>Select your option</option>
           <option value="Student">Student</option>
           <option value="Working">Working Professional</option>
         </select>
-        <a href="#" class="button" >Submit</a>
-      </form>
-    </div>
+        <a routerLink="/specs"><button class="button" (click)="addRecord()" [disabled] = "!email || !phone || !workingStatus">Submit</button></a>
+      </div>
+      </div>
   </div>
 </main>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Path } from 'three';
+import { WriteService } from '../service/write.service';
+import { SpecsComponent } from '../specs/specs.component';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +15,21 @@ export class HomeComponent implements OnInit {
   navLinks;
   links;
 
-  constructor() { }
+  email: string;
+  phone: number;
+  workingStatus: string;
+
+  constructor(public writeservice: WriteService) { }
+
+  addRecord() {
+    let User = {};
+    User['E-mail'] = this.email;
+    User['Phone'] = this.phone;
+    User['Working Status'] = this.workingStatus;
+    this.writeservice.writeUserData(User).then(res => {
+      
+    })
+  }
 
   ngOnInit(): void {
     this.hamburger = document.querySelector('.hamburger');
