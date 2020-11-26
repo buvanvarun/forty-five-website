@@ -78,7 +78,7 @@ export class ThreeloaderComponent implements OnInit {
           visible: true,
         });
         initComponent(bike, frame, 'lock_1');
-        frame = new THREE.MeshPhongMaterial({
+          frame = new THREE.MeshPhongMaterial({
           visible: false,
         });
         initComponent(bike, frame, 'lock');
@@ -184,7 +184,7 @@ export class ThreeloaderComponent implements OnInit {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ReinhardToneMapping;
-    renderer.toneMappingExposure = 2.3;
+    renderer.toneMappingExposure = 2.5;
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     container.appendChild(renderer.domElement);
@@ -194,17 +194,13 @@ export class ThreeloaderComponent implements OnInit {
     // camera
 
     camera = new THREE.PerspectiveCamera(
-      50,
-      container.clientWidth / container.clientHeight,
-      5,
-      7000
+      50, container.clientWidth / container.clientHeight, 5, 7000
     );
     scene.add(camera);
     let controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
     controls.enablePan = false;
-    controls.enableZoom = false;
-    controls.maxPolarAngle = Math.PI / 2;
+    controls.enableZoom = true;
     let loader = new GLTFLoader();
     let url = '/assets/3d/bike.glb';
 
@@ -383,7 +379,7 @@ export class ThreeloaderComponent implements OnInit {
         // bike.position.y
         // bike_position = bike.position.y;
         // console.log(bike_position);
-        camera.lookAt(center);
+        camera.lookAt(screen);
 
         initColor(bike, TYRE_MTL);
         initFrame(bike, FRAME_MTL);
@@ -644,7 +640,7 @@ export class ThreeloaderComponent implements OnInit {
     scene.add(plane);
     function animate() {
       requestAnimationFrame(animate);
-      bike.rotation.y += 0.008;
+      // bike.rotation.y += 0.008;
 
       renderer.render(scene, camera);
 
