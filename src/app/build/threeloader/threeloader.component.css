@@ -37,14 +37,16 @@
   color: black;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  /* text-decoration: none;
+  display: inline-block; */
   font-size: 20px;
+  width: max-content;
 }
 
 .color-btn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  border: black;
+  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+  border: none;
+  cursor: grab;
 }
 
 .navbar {
@@ -79,7 +81,9 @@
   border: none;
   outline: none;
   color: white;
+  background-color: #d8d8d8;
   padding: 14px 16px;
+  font-size: 24px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -87,14 +91,15 @@
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #d8d8d8;
+  color: black;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #d8d8d8;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;

@@ -152,6 +152,12 @@ h3 {
     -webkit-clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
   }
+  .top-right-container {
+    position: relative;
+    right: 0%;
+    color: white;
+    top: 0%;
+  }
   .nav-container {
     position: relative;
     top: 50%;

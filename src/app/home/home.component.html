@@ -35,6 +35,8 @@
           <option value="Working">Working Professional</option>
         </select>
         <a routerLink="/specs"><button class="button" (click)="addRecord()" [disabled] = "!email || !phone || !workingStatus">Submit</button></a>
+        
+        <a routerLink="/specs"><button class="button">Close</button></a>
       </div>
       </div>
   </div>
