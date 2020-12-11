@@ -184,7 +184,7 @@ export class ThreeloaderComponent implements OnInit {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ReinhardToneMapping;
-    renderer.toneMappingExposure = 2.5;
+    renderer.toneMappingExposure = 2;
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     container.appendChild(renderer.domElement);
@@ -194,7 +194,7 @@ export class ThreeloaderComponent implements OnInit {
     // camera
 
     camera = new THREE.PerspectiveCamera(
-      50, container.clientWidth / container.clientHeight, 5, 7000
+      20, container.clientWidth / container.clientHeight, 10, 7000
     );
     scene.add(camera);
     let controls = new OrbitControls(camera, renderer.domElement);
@@ -317,11 +317,14 @@ export class ThreeloaderComponent implements OnInit {
       visible: false,
     });
 
-    camera.position.set(10, 10, 10);
+    camera.position.set(100, 0, 0);
+    // camera.position.x = 0;
+    // camera.position.y = 0;
+    // camera.position.z = 0;
+    // camera.translateZ(1);
     let dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderConfig({ type: 'js' });
     dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
-
     loader.setDRACOLoader(dracoLoader);
     loader
       .loadAsync(url)
@@ -339,7 +342,6 @@ export class ThreeloaderComponent implements OnInit {
           if (o.isMesh) {
             o.castShadow = true;
             o.receiveShadow = true;
-
             if (o.material.map) {
               o.material.map.anisotropy = 16;
             }
@@ -640,7 +642,7 @@ export class ThreeloaderComponent implements OnInit {
     scene.add(plane);
     function animate() {
       requestAnimationFrame(animate);
-      // bike.rotation.y += 0.008;
+      bike.rotation.y -= 0.008;
 
       renderer.render(scene, camera);
 
