@@ -194,7 +194,7 @@ export class ThreeloaderComponent implements OnInit {
     // camera
 
     camera = new THREE.PerspectiveCamera(
-      20, container.clientWidth / container.clientHeight, 10, 7000
+      20, container.clientWidth / container.clientHeight , 0.5, 8000
     );
     scene.add(camera);
     let controls = new OrbitControls(camera, renderer.domElement);
@@ -368,11 +368,11 @@ export class ThreeloaderComponent implements OnInit {
         let cameraZ = Math.abs((maxDim / 4) * Math.tan(fov * 2));
 
         if (window.innerWidth < 595) {
-          camera.position.z = 3740;
+          camera.position.z = 6100;
         } else if (window.innerWidth < 1220) {
-          camera.position.z = 2200;
+          camera.position.z = 4600;
         } else {
-          camera.position.z = 1540;
+          camera.position.z = 3900;
         }
 
         camera.updateProjectionMatrix();
