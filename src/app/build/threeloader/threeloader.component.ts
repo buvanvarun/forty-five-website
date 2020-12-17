@@ -169,7 +169,7 @@ export class ThreeloaderComponent implements OnInit {
 
     // background
 
-    scene.background = new THREE.Color(0xd8d8d8);
+    scene.background = new THREE.Color(0x878787);
 
     // scene.background = new THREE.Color(0xffffff);
 
@@ -368,11 +368,11 @@ export class ThreeloaderComponent implements OnInit {
         let cameraZ = Math.abs((maxDim / 4) * Math.tan(fov * 2));
 
         if (window.innerWidth < 595) {
-          camera.position.z = 6100;
+          camera.position.z = 7200;
         } else if (window.innerWidth < 1220) {
-          camera.position.z = 4600;
+          camera.position.z = 5700;
         } else {
-          camera.position.z = 3900;
+          camera.position.z = 5000;
         }
 
         camera.updateProjectionMatrix();
@@ -642,7 +642,7 @@ export class ThreeloaderComponent implements OnInit {
     scene.add(plane);
     function animate() {
       requestAnimationFrame(animate);
-      bike.rotation.y -= 0.008;
+      bike.rotation.y -= 0.01;
 
       renderer.render(scene, camera);
 

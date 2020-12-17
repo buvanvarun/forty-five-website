@@ -1,15 +1,13 @@
 .loader {
   position: absolute !important;
   top: 10%;
-  left: 0%;
-  width: 90vw;
-  height: 88vh;
-  /* outline: none; */
-  /* border: black solid 10px; */
+  left: 15%;
+  width: 70vw;
+  height: 90vh;
+  outline: none;
+  border: none;
 }
-
-/* .color-btn {
-  display: none;
+.color-btn {
   position: absolute;
   top: 85%;
   left: 50%;
@@ -19,113 +17,8 @@
   width: 10vw;
   justify-content: space-evenly;
   align-items: center;
-} */
-
-.customize {
-  font-size: 30px;
-  font-weight: bold;
-  align-content: center;
 }
-
-.question {
-  font-size: 20px;
-}
-
-.color-btn {
-  background-color: #d8d8d8; /* Green */
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  /* text-decoration: none;
-  display: inline-block; */
-  font-size: 20px;
-  width: max-content;
-}
-
-.color-btn:hover {
-  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
-  border: none;
-  cursor: grab;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-}
-
-.navbar-right {
-  float: right;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: #d8d8d8;
-  padding: 14px 16px;
-  font-size: 24px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #d8d8d8;
-  color: black;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #d8d8d8;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* .black {
+.black {
   border: none;
   border-radius: 50%;
   background-color: black;
@@ -152,7 +45,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-} */
+}
 
 .color-btn-container {
   border-radius: 50%;
@@ -210,27 +103,6 @@
   border-left: 1.5px solid black;
   height: 5vh;
 }
-
-.specs-build-premium-build-btn {
-  position: absolute;
-  right: 10%;
-  bottom: 50%;
-  background-color: #1d1d1f;
-  color: #ffffff;
-  padding: 5px 5px;
-  font-size: 30px;
-  font-family: inherit;
-  font-weight: 500;
-  border: none;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-}
-.specs-build-premium-build-btn::after {
-  content: "\2192";
-}
-
 
 @media screen and (max-width: 595px) {
   .loader {

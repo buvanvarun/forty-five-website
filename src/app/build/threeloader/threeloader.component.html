@@ -5,53 +5,52 @@
   </ngx-spinner>
   <div>
     <div class="loader" id="container"></div><!-- This is used for loading the 3D model -->
-    <div class="navbar">
-      <div class="navbar-right">
-        <div class="dropdown">
-          <button class="dropbtn">Colors
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
-            <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
-          </div>
+    <div *ngIf="bikeColor" class="color-btn">
+      <div class="color-black">
+        <div class="color-btn-container">
+          <button (click)="setColor(0)" class="black" id="black"></button>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Fenders
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <button (click)="setFenders(1)" class="color-btn" id="fender-yes"> Yes </button>
-            <button (click)="setFenders(0)" class="color-btn" id="fender-no"> No </button>
-          </div>
+        <div class="color-btn-text">Black</div>
+      </div>
+      <div class="color-gray">
+        <div class="color-btn-container">
+          <button (click)="setColor(1)" class="gray" id="gray"></button>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Locking System
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <button (click)="setLock(0)" class="color-btn" id="cable"> Cable Lock </button>
-            <button (click)="setLock(1)" class="color-btn" id="smart"> Smart Lock </button>
-          </div>
-        </div>
+        <div class="color-btn-text">Gray</div>
       </div>
     </div>
-    <div style="float: left; margin-left: 70%;">
-      <!-- <p class="customize">Customize your vehicle:</p>
-      <p class="question">Try out our colors:</p>
-      <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
-      <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
-      <p class="question">Do you think Fenders look cool?</p>
-      <button (click)="setFenders(1)" class="color-btn" id="fender-yes"> Yes </button>
-      <button (click)="setFenders(0)" class="color-btn" id="fender-no"> No </button>
-      <p class="question">Locking is necessary. Choose the stylish one:</p>
-      <button (click)="setLock(0)" class="color-btn" id="cable"> Cable Lock </button>
-      <button (click)="setLock(1)" class="color-btn" id="smart"> Smart Lock </button>
-      <p class="question">Do you want to know when your vehicle is short of air?</p>
-      <button (click)="setTpms(1)" class="color-btn" id="tpms-yes"> Yes </button>
-      <button (click)="setTpms(0)" class="color-btn" id="tpms-no"> No </button> -->
-      <!-- <p>Click on the button below to confirm your awesome bike </p> -->
-      <button (click)="buyProduct()" class="specs-build-premium-build-btn"></button>
+    <div *ngIf="fenders" class="fenders">
+      <div class="build-choice-range-container">
+        <button (click)="setFenders(1)" class="build-choice-btn" id="fender-yes">
+          Yes
+        </button>
+        <div class="vl"></div>
+        <button (click)="setFenders(0)" class="build-choice-btn" id="fender-no">
+          No
+        </button>
+      </div>
+    </div>
+    <div *ngIf="lock" class="fenders">
+      <div class="build-choice-range-container">
+        <button (click)="setLock(0)" class="build-choice-btn" id="cable">
+          Cable Lock
+        </button>
+        <div class="vl"></div>
+        <button (click)="setLock(1)" class="build-choice-btn" id="smart">
+          Smart Lock
+        </button>
+      </div>
+    </div>
+    <div *ngIf="tpms" class="fenders">
+      <div class="build-choice-range-container">
+        <button (click)="setTpms(1)" class="build-choice-btn" id="tpms-yes">
+          Yes
+        </button>
+        <div class="vl"></div>
+        <button (click)="setTpms(0)" class="build-choice-btn" id="tpms-no">
+          No
+        </button>
+      </div>
     </div>
   </div>
 </main>
