@@ -368,11 +368,11 @@ export class ThreeloaderComponent implements OnInit {
         let cameraZ = Math.abs((maxDim / 4) * Math.tan(fov * 2));
 
         if (window.innerWidth < 595) {
-          camera.position.z = 7200;
+          camera.position.z = 7000;
         } else if (window.innerWidth < 1220) {
-          camera.position.z = 5700;
+          camera.position.z = 5500;
         } else {
-          camera.position.z = 5000;
+          camera.position.z = 4800;
         }
 
         camera.updateProjectionMatrix();
@@ -642,7 +642,7 @@ export class ThreeloaderComponent implements OnInit {
     scene.add(plane);
     function animate() {
       requestAnimationFrame(animate);
-      bike.rotation.y -= 0.01;
+      bike.rotation.y -= 0.025;
 
       renderer.render(scene, camera);
 

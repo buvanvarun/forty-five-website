@@ -1,13 +1,26 @@
+main {
+  background-color: #878787;
+}
+.bgClass {
+  background-color: #878787;
+  width: 95vw;
+  height: 91.7vh;
+}
+
 .loader {
   position: absolute !important;
   top: 10%;
-  left: 15%;
-  width: 70vw;
-  height: 90vh;
-  outline: none;
-  border: none;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  width: 80vw; 
+  height: 80vh;
+  /* outline: none; */
+  /* border: black solid 10px; */
 }
-.color-btn {
+
+/* .color-btn {
+  display: none;
   position: absolute;
   top: 85%;
   left: 50%;
@@ -17,8 +30,62 @@
   width: 10vw;
   justify-content: space-evenly;
   align-items: center;
+} */
+
+/* .customize {
+  font-size: 30px;
+  font-weight: bold;
+  align-content: center;
 }
-.black {
+
+.question {
+  font-size: 20px;
+} */
+.nav{
+  border:1px #878787;
+  /* list-style:none; */
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+.nav li{
+  display:inline;
+}
+.nav button{
+  /* display:inline-block; */
+  padding:20px;
+  font-size: 24px;
+  background-color: #878787;
+  color: white;
+  border: none;
+}
+
+.nav button:hover {
+  border-bottom: 1px solid white;
+}
+
+.content-left {
+  background-color: #878787;
+  color: white;
+  font-size: 32px;
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+  border: none;
+  cursor: pointer;
+}
+
+.content-right {
+  background-color: #878787;
+  color: white;
+  font-size: 32px;
+  position: absolute;
+  bottom: 5%;
+  right: 40%;
+  border: none;
+  cursor: pointer;
+}
+/* .black {
   border: none;
   border-radius: 50%;
   background-color: black;
@@ -45,9 +112,9 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-}
+} */
 
-.color-btn-container {
+/* .color-btn-container {
   border-radius: 50%;
   border: 1px solid #787878;
   align-items: center;
@@ -102,8 +169,27 @@
 .vl {
   border-left: 1.5px solid black;
   height: 5vh;
+}*/
+
+.specs-build-premium-build-btn {
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  background-color: #878787;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  border-radius: 10%;
+  /* width: 80px; */
+  /* height: 80px; */
+  cursor: pointer;
 }
 
+
+/*
 @media screen and (max-width: 595px) {
   .loader {
     width: 100vw;
@@ -120,4 +206,4 @@
     left: 0;
     top: 10%;
   }
-}
+} */
