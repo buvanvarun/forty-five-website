@@ -5,7 +5,7 @@
   </ngx-spinner>
   <ul class="nav">
     <li>
-      <button class="dropbtn">Colors
+      <button class="dropbtn" (click)="display_color_content()">COLORS
         <i class="fa fa-caret-down"></i>
       </button>
       <!-- <div class="dropdown-content">
@@ -14,7 +14,7 @@
       </div> -->
     </li>
     <li>
-      <button class="dropbtn">Fenders
+      <button class="dropbtn" (click)="display_color_fenders()">FENDERS
         <i class="fa fa-caret-down"></i>
       </button>
       <!-- <div class="dropdown-content">
@@ -23,7 +23,7 @@
       </div> -->
     </li>
     <li>
-      <button class="dropbtn">Locking System
+      <button class="dropbtn" (click)="display_color_lock()">LOCKING SYSTEM
         <i class="fa fa-caret-down"></i>
       </button>
       <!-- <div class="dropdown-content">
@@ -49,11 +49,19 @@
       <button (click)="setTpms(1)" class="color-btn" id="tpms-yes"> Yes </button>
       <button (click)="setTpms(0)" class="color-btn" id="tpms-no"> No </button> -->
       <!-- <p>Click on the button below to confirm your awesome bike </p> -->
-      <div class="content">
+      <div class="dropdown-content-color">
         <button (click)="setColor(0)" class="content-left" id="black">Black</button>
         <button (click)="setColor(1)" class="content-right" id="gray">Gray</button>
       </div>
-      <button (click)="buyProduct()" class="specs-build-premium-build-btn">Proceed >>></button>
+      <div class="dropdown-content-fendors">
+        <button (click)="setFenders(1)" class="content-left" id="fender-yes"> Yes </button>
+        <button (click)="setFenders(0)" class="content-right" id="fender-no"> No </button>
+      </div>
+      <div class="dropdown-content-lock">
+        <button (click)="setLock(0)" class="content-left" id="cable"> Cable Lock </button>
+        <button (click)="setLock(1)" class="content-right" id="smart"> Smart Lock </button>
+      </div>
+      <button (click)="buyProduct()" class="specs-build-premium-build-btn">>>> Proceed >>></button>
     </div>
   </div>
 </main>

@@ -31,6 +31,30 @@ export class ThreeloaderComponent implements OnInit {
     const goToUrl = `https://pages.razorpay.com/fortyfivebike?bike_color=${color}&range_plus=${this.choices[1]}&charging_plus=${this.choices[2]}&electronic_locking=${this.choices[3]}&intelligent_systems_service=${this.choices[5]}&tyre_pressure_monitoring=${this.choices[6]}&fenders=${this.choices[4]}`;
     window.open(goToUrl, '_self');
   };
+  display_color_content() {
+    var eleColor = document.getElementsByClassName("dropdown-content-color") as HTMLCollectionOf<HTMLElement>;
+    eleColor[0].style.display = "flex";
+    var eleLock = document.getElementsByClassName("dropdown-content-lock") as HTMLCollectionOf<HTMLElement>;
+    eleLock[0].style.display = "none";
+    var eleFenders = document.getElementsByClassName("dropdown-content-fendors") as HTMLCollectionOf<HTMLElement>;
+    eleFenders[0].style.display = "none";
+  }
+  display_color_lock() {
+    var eleColor = document.getElementsByClassName("dropdown-content-color") as HTMLCollectionOf<HTMLElement>;
+    eleColor[0].style.display = "none";
+    var eleLock = document.getElementsByClassName("dropdown-content-lock") as HTMLCollectionOf<HTMLElement>;
+    eleLock[0].style.display = "flex";
+    var eleFenders = document.getElementsByClassName("dropdown-content-fendors") as HTMLCollectionOf<HTMLElement>;
+    eleFenders[0].style.display = "none";
+  }
+  display_color_fenders() {
+    var eleColor = document.getElementsByClassName("dropdown-content-color") as HTMLCollectionOf<HTMLElement>;
+    eleColor[0].style.display = "none";
+    var eleLock = document.getElementsByClassName("dropdown-content-lock") as HTMLCollectionOf<HTMLElement>;
+    eleLock[0].style.display = "none";
+    var eleFenders = document.getElementsByClassName("dropdown-content-fendors") as HTMLCollectionOf<HTMLElement>;
+    eleFenders[0].style.display = "flex";
+  }
   setColor(val) {
     this.sendColor.emit(val);
   }
@@ -200,7 +224,7 @@ export class ThreeloaderComponent implements OnInit {
     let controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
     controls.enablePan = false;
-    controls.enableZoom = true;
+    controls.enableZoom = false;
     let loader = new GLTFLoader();
     let url = '/assets/3d/bike.glb';
 
@@ -642,7 +666,7 @@ export class ThreeloaderComponent implements OnInit {
     scene.add(plane);
     function animate() {
       requestAnimationFrame(animate);
-      bike.rotation.y -= 0.025;
+      bike.rotation.y -= 0.02;
 
       renderer.render(scene, camera);
 

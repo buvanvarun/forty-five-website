@@ -4,7 +4,7 @@ main {
 .bgClass {
   background-color: #878787;
   width: 95vw;
-  height: 91.7vh;
+  height: 93vh;
 }
 
 .loader {
@@ -53,8 +53,9 @@ main {
 }
 .nav button{
   /* display:inline-block; */
-  padding:20px;
-  font-size: 24px;
+  padding:10px;
+  font-size: 32px;
+  font-weight: 500px;
   background-color: #878787;
   color: white;
   border: none;
@@ -70,7 +71,7 @@ main {
   font-size: 32px;
   position: absolute;
   bottom: 5%;
-  left: 40%;
+  left: 42%;
   border: none;
   cursor: pointer;
 }
@@ -84,6 +85,18 @@ main {
   right: 40%;
   border: none;
   cursor: pointer;
+}
+
+.dropdown-content-lock {
+  display: none;
+}
+
+.dropdown-content-color {
+  display: none;
+}
+
+.dropdown-content-fendors {
+  display: none;
 }
 /* .black {
   border: none;
