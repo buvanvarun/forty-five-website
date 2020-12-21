@@ -3,7 +3,37 @@
     [fullScreen]="true">
     <p style="color: #1d1d1f">Please wait...We are loading your 3D experience...</p>
   </ngx-spinner>
-  <ul class="nav">
+
+  <ul class="nav scrollmenu">
+    <li class="logo_list">  <img class="logo" src="assets/images/fortyfivelogo.png">
+    </li>
+    <li>
+      <button class="dropbtn" (click)="display_color_content()">COLORS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <!-- <div class="dropdown-content">
+        <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
+        <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
+      </div> -->
+    </li>
+    <li>
+      <button class="dropbtn" (click)="display_color_content()">COLORS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <!-- <div class="dropdown-content">
+        <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
+        <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
+      </div> -->
+    </li>
+    <li>
+      <button class="dropbtn" (click)="display_color_content()">COLORS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <!-- <div class="dropdown-content">
+        <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
+        <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
+      </div> -->
+    </li>
     <li>
       <button class="dropbtn" (click)="display_color_content()">COLORS
         <i class="fa fa-caret-down"></i>
@@ -33,7 +63,9 @@
     </li>
   </ul>
   <div class="bgClass">
-    <div class="loader" id="container"></div><!-- This is used for loading the 3D model -->
+    <div class="configuratorContainer">
+      <div class="loader" id="container"></div><!-- This is used for loading the 3D model -->
+    </div>
     <div style="float: left; margin-left: 70%;">
       <!-- <p class="customize">Customize your vehicle:</p>
       <p class="question">Try out our colors:</p>

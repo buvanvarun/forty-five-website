@@ -193,8 +193,8 @@ export class ThreeloaderComponent implements OnInit {
 
     // background
 
-    scene.background = new THREE.Color(0x878787);
-
+    scene.background = new THREE.Color(0xffffff);
+    // 0x878787
     // scene.background = new THREE.Color(0xffffff);
 
     // renderer
@@ -218,7 +218,7 @@ export class ThreeloaderComponent implements OnInit {
     // camera
 
     camera = new THREE.PerspectiveCamera(
-      20, container.clientWidth / container.clientHeight , 0.5, 8000
+      20, container.clientWidth / container.clientHeight , 0.5, 10000
     );
     scene.add(camera);
     let controls = new OrbitControls(camera, renderer.domElement);
@@ -377,7 +377,7 @@ export class ThreeloaderComponent implements OnInit {
         const center = new THREE.Vector3();
         boundingBox.getCenter(center);
         camera.position.y = center.y - 400;
-        if (window.innerWidth < 595) {
+        if (window.innerWidth < 750) {
           camera.position.x = center.x + 600;
         } else {
           camera.position.x = center.x + 1200;
@@ -391,8 +391,8 @@ export class ThreeloaderComponent implements OnInit {
         const maxDim = Math.max(size.x, size.y, size.z);
         let cameraZ = Math.abs((maxDim / 4) * Math.tan(fov * 2));
 
-        if (window.innerWidth < 595) {
-          camera.position.z = 7000;
+        if (window.innerWidth < 750) {
+          camera.position.z = 8600;
         } else if (window.innerWidth < 1220) {
           camera.position.z = 5500;
         } else {
