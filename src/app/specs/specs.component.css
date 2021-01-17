@@ -1,12 +1,123 @@
 main {
-  background-color: white;
-  width: 100%;
+  background-color: #e8e8e8;
+  width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
 }
 
+.contact-heading {
+  font-size: 40px;
+  padding: 10px;
+  position: relative;
+  left: 10%;
+}
+
+.contact-content {
+  text-align: right;
+  position: relative;
+  right: 5%;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.display-content {
+  display: flex;
+}
+
+.content-left {
+  width: 70vw;
+  height: 30vh;
+  background-color: black;
+  display: inline;
+  /* margin-left: 0%; */
+  /* position: absolute; */
+  /* top: 10%; */
+}
+
+.image-right {
+  width: 30vw;
+  height: 30vh;
+  display: inline;
+  /* margin-left: 0%; */
+  /* position: absolute; */
+  /* left: 70%; */
+  /* top: 10%; */
+  background-color: blue;
+}
+
+.content-right {
+  width: 70vw;
+  height: 30vh;
+  background-color: black;
+  /* margin-left: 30%; */
+  display: inline;
+  /* position: absolute; */
+  /* top: 40%; */
+  /* left: 30%;; */
+}
+
+.image-left {
+  width: 30vw;
+  height: 30vh;
+  display: inline;
+  /* margin-left: 0%; */
+  /* position: absolute; */
+  /* top: 40%; */
+  background-color: blue;
+}
+
+@media screen and (min-width:200px) and (max-width: 750px){
+  .display-content {
+    display: inline-block;
+    padding-top: 10px;
+  }
+
+  .content-left {
+    width: 80vw;
+    height: 30vh;
+    background-color: black;
+    display: inline-block;
+    margin-left: 10vw;
+    /* margin-left: 0%; */
+    /* position: absolute; */
+    /* top: 10%; */
+  }
+  
+  .image-right {
+    width: 80vw;
+    height: 30vh;
+    display: inline-block;
+    margin-left: 10vw;
+    /* position: absolute; */
+    /* left: 70%; */
+    /* top: 10%; */
+    background-color: blue;
+  }
+  
+  .content-right {
+    width: 80vw;
+    height: 30vh;
+    background-color: blue;
+    display: inline-block;
+    margin-left: 10vw;
+    /* position: absolute; */
+    /* top: 40%; */
+    /* left: 30%;; */
+  }
+  
+  .image-left {
+    width: 80vw;
+    height: 30vh;
+    display: inline-block;
+    margin-left: 10vw;
+    /* position: absolute; */
+    /* left: 70%; */
+    /* top: 10%; */
+    background-color: black;
+  }
+}
 .specs-outer-wrapper {
   position: absolute;
   width: 100vh;

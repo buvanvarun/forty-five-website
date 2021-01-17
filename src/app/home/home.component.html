@@ -11,11 +11,11 @@
     <ul class="nav-links">
       <div class="nav-container">
         <li>specs</li>
-        <li>blog</li>
-        <li>experience</li>
+        <!-- <li>blog</li> -->
+        <!-- <li>experience</li> -->
         <li>preorder</li>
         <li>FAQs</li>
-        <li>feedback</li>
+        <!-- <li>feedback</li> -->
       </div>
     </ul>
   </nav>
@@ -34,8 +34,7 @@
           <option value="Student">Student</option>
           <option value="Working">Working Professional</option>
         </select>
-        <a routerLink="/specs"><button class="button" (click)="addRecord()" [disabled] = "!email || !phone || !workingStatus">Submit</button></a>
-        
+        <a routerLink="/initial-screen"><button class="button" (click)="addRecord()" [disabled] = "!email || !phone || !workingStatus">Submit</button></a>
         <a routerLink="/specs"><button class="button">Close</button></a>
       </div>
       </div>

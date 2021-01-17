@@ -1,0 +1,15 @@
+h1 {
+    font-size: 60px;
+    font-stretch: semi-expanded;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+}
+
+h3 {
+    font-size: 60px;
+    font-stretch: semi-expanded;
+    position: absolute;
+    top: 35vh;
+    left: 10vw;
+}

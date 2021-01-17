@@ -24,7 +24,7 @@ import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { InitialScreenComponent } from './initial-screen/initial-screen.component';
 
 
 @NgModule({
@@ -40,6 +40,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     ThreeloaderComponent,
     BuyComponent,
     CareerApplicationComponent,
+    InitialScreenComponent,
   ],
   imports: [
     BrowserModule,

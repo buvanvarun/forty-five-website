@@ -193,7 +193,7 @@ export class ThreeloaderComponent implements OnInit {
 
     // background
 
-    scene.background = new THREE.Color(0x878787);
+    scene.background = new THREE.Color(0xe8e8e8);
     // 0x878787
     // scene.background = new THREE.Color(0xffffff);
 

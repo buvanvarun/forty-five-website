@@ -3,12 +3,41 @@
     [fullScreen]="true">
     <p style="color: #1d1d1f">Please wait...We are loading your 3D experience...</p>
   </ngx-spinner>
-
-  <ul class="nav scrollmenu">
-    <li class="logo_list">  <img class="logo" src="assets/images/fortyfivelogo.png">
+  <!-- <input type="checkbox" id="switch"
+  class="checkbox" /> 
+<label for="switch" class="toggle"> 
+<p>Yes    No</p> 
+</label>  -->
+  <ul class="nav">
+    <li>
+      <p class="buttonHeading">BATTERY</p>
+      <div class="buttonDisplay">
+        <button class="batteryButtons" style="background-color: #26d45d; font-size: 12px;">43 KM
+        </button>
+        <button class="batteryButtons" style="background-color: #26d45d; font-size: 12px;">65 KM
+        </button>
+      </div>
     </li>
     <li>
+      <p class="buttonHeading">CHARGER</p>
+      <div class="buttonDisplay">
+        <button class="batteryButtons" style="background-color: #26d45d; font-size: 12px;">180 Mins
+        </button>
+        <button class="batteryButtons" style="background-color: #26d45d; font-size: 12px;">75 Mins
+        </button>
+      </div>
+    </li>
+    <li>  <img class="logo" src="assets/images/fortyfivelogo.png">
       <button class="dropbtn" (click)="display_color_content()">COLORS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <!-- <div class="dropdown-content">
+        <button (click)="setColor(0)" class="color-btn" id="black">Black</button>
+        <button (click)="setColor(1)" class="color-btn" id="gray">Gray</button>
+      </div> -->
+    </li>
+    <li class="logo_list">  
+      <button class="" (click)="display_color_lock()">LOCKS
         <i class="fa fa-caret-down"></i>
       </button>
       <!-- <div class="dropdown-content">
@@ -23,15 +52,6 @@
       <!-- <div class="dropdown-content">
         <button (click)="setFenders(1)" class="color-btn" id="fender-yes"> Yes </button>
         <button (click)="setFenders(0)" class="color-btn" id="fender-no"> No </button>
-      </div> -->
-    </li>
-    <li>
-      <button class="dropbtn" (click)="display_color_lock()">LOCKING SYSTEM
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <!-- <div class="dropdown-content">
-        <button (click)="setLock(0)" class="color-btn" id="cable"> Cable Lock </button>
-        <button (click)="setLock(1)" class="color-btn" id="smart"> Smart Lock </button>
       </div> -->
     </li>
   </ul>
